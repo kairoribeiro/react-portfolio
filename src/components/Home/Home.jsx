@@ -5,37 +5,30 @@ import { useState, useEffect} from 'react';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 
 
-const Home = () => {
+const Home = (props) => {
 
-    const [letterClass, setLetterClass] = useState('text-animate')
-    const nameArray = [' ','K','a', 'i', 'r', 'o']
-    const jobArray = ['w','e','b',' ','d','e','v','e','l','o','p','e','r','.']
+    const [nameArray, setNameArray] = useState([' ','K','a', 'i', 'r', 'o'])
+    const [jobArray, setJobArray] = useState(['w','e','b',' ','d','e','v','e','l','o','p','e','r','.'])
 
-    useEffect(() => {
-        setTimeout(() => {
-            setLetterClass('text-animate-hover')
-        }, 4000)
-    }, [])
-
-
+    
     return ( 
     <div className="container home-page">
         <div className="text-zone">
             <h1>
-                <span className={letterClass}>H</span>
-                <span className={`${letterClass} _12`}>i,</span>
+                <span className={props.letterClass}>H</span>
+                <span className={`${props.letterClass} _12`}>i,</span>
             <br />
-                <span className={`${letterClass} _13`}>I</span>
-                <span className={`${letterClass} _14`}>'m,</span>
+                <span className={`${props.letterClass} _13`}>I</span>
+                <span className={`${props.letterClass} _14`}>'m,</span>
             {/* <img src={LogoTitle} alt="developer" /> */}
             <AnimatedLetters 
-                letterClass={letterClass}
+                letterClass={props.letterClass}
                 strArray={nameArray}
                 idx={12}
             />
             <br />
             <AnimatedLetters 
-                letterClass={letterClass}
+                letterClass={props.letterClass}
                 strArray={jobArray}
                 idx={15}
             />

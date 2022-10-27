@@ -4,12 +4,12 @@ import './AnimatedLetters.scss'
 // 1 class you want to apply to characters 
 // 2 array of the characters
 // 3 index
-const AnimatedLetters = ({letterClass, strArray, idx}) => {
+const AnimatedLetters = (props) => {
     return (
         <span>
             {
-                strArray.map((char, i) => (
-                    <span key={char + i} className={`${letterClass} _${i + idx}`}>
+                props.strArray.map((char, i) => (
+                    <span key={char + i} className={`${props.letterClass} _${i + props.idx}`}>
                         {char}
                     </span>
                 ))

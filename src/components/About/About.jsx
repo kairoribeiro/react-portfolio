@@ -4,24 +4,20 @@ import './About.scss'
 import ReactDOM from "react-dom";
 
 
-const About = () => {
+const About = (props) => {
 
-    const [letterClass, setLetterClass] = useState('text-animate')
+    const [strArray, setStrArray] = useState(['A', 'b', 'o','u','t',' ','m','e'])
+    const [idx, setIdx] = useState(12)
 
-    useEffect(() => {
-        setTimeout(() => {
-            setLetterClass('text-animate-hover')
-        }, 3000)
-    }, [])
 
     return (
         <div className='container about-page'>
             <div className='text-zone'>
                 <h1>
                     <AnimatedLetters
-                    letterClass={letterClass}
-                    strArray={['A', 'b', 'o','u','t',' ','m','e']}
-                    idx={12}
+                    letterClass={props.letterClass}
+                    strArray={strArray}
+                    idx={idx}
                     />
                 </h1>
                 <p>As a Software Engineer with a background in civil 
