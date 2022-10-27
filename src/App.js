@@ -7,7 +7,6 @@ import About from './components/About/About';
 import { useState, useEffect } from 'react';
 
 function App() {
-
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {

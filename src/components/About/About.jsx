@@ -2,6 +2,16 @@ import { useState, useEffect} from 'react';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import './About.scss'
 import ReactDOM from "react-dom";
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { 
+    faCss3,
+    faGithub,
+    faHtml5,
+    faJsSquare,
+    faReact,
+    faNode
+
+} from '@fortawesome/free-brands-svg-icons';
 
 
 const About = (props) => {
@@ -30,9 +40,30 @@ const About = (props) => {
                     inclusive environments that allow me to build 
                     authentic relationships and collaborate with those around me.
                 </p>
-
             </div>
 
+            <div className='stage-cube-cont'>
+                <div className='cubespinner'>
+                    <div className='face1'>
+                        <FontAwesomeIcon icon={faNode} color="#7CfC00" />
+                    </div>
+                    <div className='face2'>
+                        <FontAwesomeIcon icon={faHtml5} color="#f06529" />
+                    </div>
+                    <div className='face3'>
+                        <FontAwesomeIcon icon={faCss3} color="#28a4d9" />
+                    </div>
+                    <div className='face4'>
+                        <FontAwesomeIcon icon={faReact} color="#5ed4f4" />
+                    </div>
+                    <div className='face5'>
+                        <FontAwesomeIcon icon={faJsSquare} color="#efd81d" />
+                    </div>
+                    <div className='face6'>
+                        <FontAwesomeIcon icon={faGithub} color='#000000'/>
+                    </div>
+                </div>
+            </div>
         </div>
     )
 }
