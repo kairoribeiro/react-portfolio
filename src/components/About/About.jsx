@@ -68,7 +68,7 @@ const About = (props) => {
                 </div>
             </div>
         </div>
-        <Loader type='pacman' />
+        <Loader type='ball-pulse' />
         </>
     )
 }
