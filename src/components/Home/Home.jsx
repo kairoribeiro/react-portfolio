@@ -3,6 +3,7 @@ import { Link } from 'react-router-dom';
 import './Home.scss'
 import { useState, useEffect} from 'react';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
+import Loader from 'react-loaders';
 
 
 const Home = (props) => {
@@ -12,6 +13,7 @@ const Home = (props) => {
 
     
     return ( 
+    <>
     <div className="container home-page">
         <div className="text-zone">
             <h1>
@@ -37,6 +39,8 @@ const Home = (props) => {
             <Link to='/contact' className='flat-button'> CONTACT ME</Link>
         </div>
     </div>
+    <Loader type='pacman' />
+    </>
     );
 }
 

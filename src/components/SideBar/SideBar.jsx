@@ -46,7 +46,7 @@ const SideBar = () => {
                         rel='noreferrer'
                         href="https://www.linkedin.com/in/kairo-ribeiro/"
                     >
-                        <FontAwesomeIcon icon={faLinkedin} color='#4s4d4e' />
+                        <FontAwesomeIcon icon={faLinkedin} color='#0072b1' />
                     </a>
                 </li>
                 <li>
@@ -55,7 +55,7 @@ const SideBar = () => {
                         rel='noreferrer'
                         href="https://github.com/kairoribeiro"
                     >
-                        <FontAwesomeIcon icon={faGithub} color='#4s4d4e' />
+                        <FontAwesomeIcon icon={faGithub} color='#808080' />
                     </a>
                 </li>
             </ul>
