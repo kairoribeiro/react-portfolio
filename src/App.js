@@ -7,6 +7,7 @@ import About from './components/About/About';
 import { useState, useEffect } from 'react';
 import Contact from './components/Contact/Contact';
 
+
 function App() {
   const [letterClass, setLetterClass] = useState('text-animate')
 
@@ -15,6 +16,7 @@ function App() {
         setLetterClass('text-animate-hover')
     }, 3000)
 },[])
+
 
   return (
     <>
