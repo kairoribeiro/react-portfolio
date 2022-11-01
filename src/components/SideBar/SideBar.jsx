@@ -3,17 +3,13 @@ import './SideBar.scss'
 import LogoK from '../../assets/images/logo-k.png'
 import LogoSubtitle from '../../assets/images/kairo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser } from '@fortawesome/free-solid-svg-icons';
+import { faEnvelope, faHome, faUser, faScrewdriverWrench, faPersonDigging, faFile } from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
 
 
 const SideBar = () => {
     return (
         <div className='nav-bar'>
-            <Link className='logo' to='/'>
-                <img src={LogoK} alt="logo" />
-                <img className='sub-logo' src={LogoSubtitle} alt="logoSubtitle" />
-            </Link>
             <nav>
                 <NavLink 
                     exact='true' 
@@ -32,11 +28,35 @@ const SideBar = () => {
                 </NavLink>
                 <NavLink 
                     exact='true' 
+                    activeclassname='active'
+                    className='skills-link' 
+                    to='/skills'
+                >
+                    <FontAwesomeIcon icon={faScrewdriverWrench} color='#4d4d4e' />
+                </NavLink>
+                <NavLink 
+                    exact='true' 
+                    activeclassname='active' 
+                    className='work-link' 
+                    to='/work'
+                >
+                    <FontAwesomeIcon icon={faPersonDigging} color='#4d4d4e' />
+                </NavLink>
+                <NavLink 
+                    exact='true' 
                     activeclassname='active' 
                     className='contact-link' 
                     to='/contact'
                 >
                     <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e' />
+                </NavLink>
+                <NavLink 
+                    exact='true' 
+                    activeclassname='active' 
+                    className='resume-link' 
+                    to='/resume'
+                >
+                    <FontAwesomeIcon icon={faFile} color='#4d4d4e' />
                 </NavLink>
             </nav>
             <ul>

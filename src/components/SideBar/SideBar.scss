@@ -87,9 +87,27 @@ nav {
         }
     }
 
+    a.skills-link {
+        &::after {
+            content: 'SKILLS';
+        }
+    }
+
+    a.work-link {
+        &::after {
+            content: 'WORK';
+        }
+    }
+
     a.contact-link {
         &::after {
             content: 'CONTACT';
+        }
+    }
+
+    a.resume-link {
+        &::after {
+            content: 'RESUME';
         }
     }
 
