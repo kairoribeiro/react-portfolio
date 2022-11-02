@@ -25,6 +25,7 @@ const SideBar = () => {
         <div className='nav-bar'>
             <nav className={showNav ? 'mobile-show' : ''}>
                 <NavLink 
+                    onClick={() => setShowNav(false)}
                     exact='true' 
                     activeclassname='active' 
                     to='/'
@@ -32,6 +33,7 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faHome} color='#fff' />
                 </NavLink>
                 <NavLink 
+                    onClick={() => setShowNav(false)}
                     exact='true' 
                     activeclassname='active' 
                     className='about-link' 
@@ -40,6 +42,7 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faUser} color='#fff' />
                 </NavLink>
                 <NavLink 
+                    onClick={() => setShowNav(false)}
                     exact='true' 
                     activeclassname='active'
                     className='skills-link' 
@@ -48,6 +51,7 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faScrewdriverWrench} color='#fff' />
                 </NavLink>
                 <NavLink 
+                    onClick={() => setShowNav(false)}
                     exact='true' 
                     activeclassname='active' 
                     className='work-link' 
@@ -56,6 +60,7 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faPersonDigging} color='#fff' />
                 </NavLink>
                 <NavLink 
+                    onClick={() => setShowNav(false)}
                     exact='true' 
                     activeclassname='active' 
                     className='contact-link' 
@@ -64,6 +69,7 @@ const SideBar = () => {
                     <FontAwesomeIcon icon={faEnvelope} color='#fff' />
                 </NavLink>
                 <NavLink 
+                    onClick={() => setShowNav(false)}
                     exact='true' 
                     activeclassname='active' 
                     className='resume-link' 
@@ -79,7 +85,7 @@ const SideBar = () => {
                     className='close-icon'
                 />
             </nav>
-            <ul>
+            <ul className='sideUl'>
                 <li>
                     <a 
                         target='blank'

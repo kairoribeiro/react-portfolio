@@ -102,7 +102,7 @@ nav {
     }
 }
 
-ul {
+.sideUl {
     position: absolute;
     bottom: 15px;
     width: 100%;
@@ -120,12 +120,15 @@ ul {
             line-height: 16px;
             margin-bottom: 10px;
 
+            
+
             &:hover svg {
                 color: #ffd700;
             }
         }
     }
 }
+
 
 .hamburger-icon,
 .close-icon {
