@@ -43,17 +43,10 @@ p {
 }
 
 .about-page, 
-.contact-page {
-    .text-zone {
-        position: absolute;
-        left: 10%;
-        top: 50%;
-        transform: translateY(-50%);
-        width: 35%;
-        vertical-align: middle;
-        display: table-cell;
-        max-height: 90%;
-
+.contact-page,
+.work-page, 
+.skills-page{
+    
         h1 {
             font-size: 53px;
             font-family: 'Coolvetica';
@@ -63,6 +56,7 @@ p {
             position: relative;
             margin-bottom: 40px;
             left: 10px;
+            letter-spacing: 2px;
 
             &::before {
                 content: '<h1>';
@@ -104,6 +98,16 @@ p {
                 animation-delay: 1.2s;
             }
         }
+
+        .text-zone {
+            position: absolute;
+            left: 10%;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 35%;
+            vertical-align: middle;
+            display: table-cell;
+            max-height: 90%;
     }
 
     .text-animate-hover {

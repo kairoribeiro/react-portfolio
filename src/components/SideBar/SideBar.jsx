@@ -16,7 +16,7 @@ const SideBar = () => {
                     activeclassname='active' 
                     to='/'
                 >
-                    <FontAwesomeIcon icon={faHome} color='#4d4d4e' />
+                    <FontAwesomeIcon icon={faHome} color='#fff' />
                 </NavLink>
                 <NavLink 
                     exact='true' 
@@ -24,7 +24,7 @@ const SideBar = () => {
                     className='about-link' 
                     to='/about'
                 >
-                    <FontAwesomeIcon icon={faUser} color='#4d4d4e' />
+                    <FontAwesomeIcon icon={faUser} color='#fff' />
                 </NavLink>
                 <NavLink 
                     exact='true' 
@@ -32,7 +32,7 @@ const SideBar = () => {
                     className='skills-link' 
                     to='/skills'
                 >
-                    <FontAwesomeIcon icon={faScrewdriverWrench} color='#4d4d4e' />
+                    <FontAwesomeIcon icon={faScrewdriverWrench} color='#fff' />
                 </NavLink>
                 <NavLink 
                     exact='true' 
@@ -40,7 +40,7 @@ const SideBar = () => {
                     className='work-link' 
                     to='/work'
                 >
-                    <FontAwesomeIcon icon={faPersonDigging} color='#4d4d4e' />
+                    <FontAwesomeIcon icon={faPersonDigging} color='#fff' />
                 </NavLink>
                 <NavLink 
                     exact='true' 
@@ -48,7 +48,7 @@ const SideBar = () => {
                     className='contact-link' 
                     to='/contact'
                 >
-                    <FontAwesomeIcon icon={faEnvelope} color='#4d4d4e' />
+                    <FontAwesomeIcon icon={faEnvelope} color='#fff' />
                 </NavLink>
                 <NavLink 
                     exact='true' 
@@ -56,7 +56,7 @@ const SideBar = () => {
                     className='resume-link' 
                     to='/resume'
                 >
-                    <FontAwesomeIcon icon={faFile} color='#4d4d4e' />
+                    <FontAwesomeIcon icon={faFile} color='#fff' />
                 </NavLink>
             </nav>
             <ul>
@@ -75,7 +75,7 @@ const SideBar = () => {
                         rel='noreferrer'
                         href="https://github.com/kairoribeiro"
                     >
-                        <FontAwesomeIcon icon={faGithub} color='#808080' />
+                        <FontAwesomeIcon icon={faGithub} color='#000' />
                     </a>
                 </li>
             </ul>

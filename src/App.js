@@ -14,10 +14,14 @@ function App() {
   const [letterClass, setLetterClass] = useState('text-animate')
 
   useEffect(() => {
-    setTimeout(() => {
+    const timer = setTimeout(() => {
         setLetterClass('text-animate-hover')
-    }, 3000)
-},[])
+    }, 3000);
+
+    return() => {
+      clearTimeout(timer);
+    }
+});
 
 
   return (
