@@ -22,7 +22,7 @@ h1 {
   margin-left: 200px;
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 566px) {
   body {
     overflow: visible;
   }

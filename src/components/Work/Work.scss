@@ -21,12 +21,12 @@
 
     .image-box {
         position: relative;
-        flex: 1 1 20%;
-        height: 300px;
-        width: 300px;
+        display: flex;
+        height: 250px;
+        width: 250px;
         overflow: hidden;
         border-radius: 10px;
-        max-width: calc(25% - 30px);
+        margin: 0 auto 10px;
 
         .project-image {
             position: absolute;
@@ -114,7 +114,7 @@
     }
 }
 
-@media screen and (max-width: 1200px) {
+@media screen and (max-width: 566px) {
     .container.work-page {
         width: 100%;
         padding: 20px;
