@@ -3,14 +3,27 @@ import './SideBar.scss'
 import LogoK from '../../assets/images/logo-k.png'
 import LogoSubtitle from '../../assets/images/kairo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faEnvelope, faHome, faUser, faScrewdriverWrench, faPersonDigging, faFile } from '@fortawesome/free-solid-svg-icons';
+import { 
+    faEnvelope, 
+    faHome, 
+    faUser, 
+    faScrewdriverWrench, 
+    faPersonDigging, 
+    faFile, 
+    faBars, 
+    faClose 
+} from '@fortawesome/free-solid-svg-icons';
 import { faGithub, faLinkedin } from '@fortawesome/free-brands-svg-icons';
+import { useState } from 'react';
 
 
 const SideBar = () => {
+
+    const [showNav, setShowNav] = useState(false)
+
     return (
         <div className='nav-bar'>
-            <nav>
+            <nav className={showNav ? 'mobile-show' : ''}>
                 <NavLink 
                     exact='true' 
                     activeclassname='active' 
@@ -58,6 +71,13 @@ const SideBar = () => {
                 >
                     <FontAwesomeIcon icon={faFile} color='#fff' />
                 </NavLink>
+                <FontAwesomeIcon
+                    onClick={() => setShowNav(false)}
+                    icon={faClose}
+                    color='#ffd700'
+                    size='3x'
+                    className='close-icon'
+                />
             </nav>
             <ul>
                 <li>
@@ -79,6 +99,13 @@ const SideBar = () => {
                     </a>
                 </li>
             </ul>
+            <FontAwesomeIcon 
+                onClick={() => setShowNav(true)}
+                icon={faBars}
+                color='#ffd700'
+                size='3x'
+                className='hamburger-icon'
+            />
         
         </div>
     );
