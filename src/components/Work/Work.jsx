@@ -1,11 +1,23 @@
 import './Work.scss'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import Loader from 'react-loaders';
 import projectData from '../../data/project.json'
 
 
-const Work = (props) => {
+const Work = () => {
+
+    const [letterClass, setLetterClass] = useState('text-animate')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover')
+    }, 3000);
+
+    return() => {
+      clearTimeout(timer);
+    }
+});
 
     const renderProject  = (projectData) => {
         return (
@@ -43,7 +55,7 @@ const Work = (props) => {
         <div className='container work-page'>
             <h1 className='page-title'>
                 <AnimatedLetters
-                    letterClass={props.letterClass}
+                    letterClass={letterClass}
                     strArray={'My Work'.split('')}
                     idx={10}
                 />

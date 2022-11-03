@@ -1,23 +1,40 @@
 import './Skills.scss'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 
 
-const Skills = (props) => {
+const Skills = () => {
+
+    const [letterClass, setLetterClass] = useState('text-animate')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover')
+    }, 3000);
+
+    return() => {
+      clearTimeout(timer);
+    }
+});
 
     return ( 
         <>
         <div className='container skills-page'>
             <h1 className='page-title'>
                 <AnimatedLetters 
-                    letterClass={props.letterClass}
+                    letterClass={letterClass}
                     strArray={'Skills'.split('')}
                     idx={10}
                 />
             </h1>
-            <p>My skill set includes languages and technologies like Javascript, Python, React, Node, Express, Django, PostgreSQL, MongoDB, Bootstrap, Google OAuth, HTML, and CSS.</p>
-            <div>
+            <div className='skills-info'>
+            <p>My skill set includes languages and 
+                technologies like Javascript, Python, 
+                React, Node, Express, Django, PostgreSQL, 
+                MongoDB, Bootstrap, Google OAuth, HTML, and CSS.
+            </p>
+            <div className='skills-images'>
                 <img src="/data/html.png" alt="HTML"/>
                 <img src="/data/css.png" alt="CSS"/>
                 <img src="/data/js.png" alt="JAVASCRIPT"/>
@@ -29,6 +46,7 @@ const Skills = (props) => {
                 <img src="/data/python.png" alt="PYTHON"/>
                 <img src="/data/django.png" alt="DJANGO"/>
                 <img src="/data/postgresql.png" alt="POSTGRESQL"/>
+            </div>
             </div>
         </div>
         <Loader type='ball-pulse' />

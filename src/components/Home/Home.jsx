@@ -6,10 +6,19 @@ import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import Loader from 'react-loaders';
 
 
-const Home = (props) => {
+const Home = () => {
 
-    const [nameArray, setNameArray] = useState([' ','K','a', 'i', 'r', 'o'])
-    const [jobArray, setJobArray] = useState(['w','e','b',' ','d','e','v','e','l','o','p','e','r','.'])
+    const [letterClass, setLetterClass] = useState('text-animate')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover')
+    }, 3000);
+
+    return() => {
+      clearTimeout(timer);
+    }
+});
 
     
     return ( 
@@ -17,21 +26,20 @@ const Home = (props) => {
     <div className="container home-page">
         <div className="text-zone">
             <h1>
-                <span className={props.letterClass}>H</span>
-                <span className={`${props.letterClass} _12`}>i,</span>
+                <span className={letterClass}>H</span>
+                <span className={`${letterClass} _12`}>i,</span>
             <br />
-                <span className={`${props.letterClass} _13`}>I</span>
-                <span className={`${props.letterClass} _14`}>'m,</span>
-            {/* <img src={LogoTitle} alt="developer" /> */}
+                <span className={`${letterClass} _13`}>I</span>
+                <span className={`${letterClass} _14`}>'m</span>
             <AnimatedLetters 
-                letterClass={props.letterClass}
-                strArray={nameArray}
+                letterClass={letterClass}
+                strArray={' Kairo'.split('')}
                 idx={12}
             />
             <br />
             <AnimatedLetters 
-                letterClass={props.letterClass}
-                strArray={jobArray}
+                letterClass={letterClass}
+                strArray={'Web Developer'.split('')}
                 idx={15}
             />
             </h1>

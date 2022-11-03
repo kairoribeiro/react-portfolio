@@ -16,11 +16,19 @@ import {
 } from '@fortawesome/free-brands-svg-icons';
 
 
-const About = (props) => {
+const About = () => {
 
-    const [strArray, setStrArray] = useState(['A', 'b', 'o','u','t',' ','m','e'])
-    const [idx, setIdx] = useState(12)
+    const [letterClass, setLetterClass] = useState('text-animate')
 
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover')
+    }, 3000);
+
+    return() => {
+      clearTimeout(timer);
+    }
+});
 
     return (
         <>
@@ -28,9 +36,9 @@ const About = (props) => {
             <div className='text-zone'>
                 <h1>
                     <AnimatedLetters
-                    letterClass={props.letterClass}
-                    strArray={strArray}
-                    idx={idx}
+                    letterClass={letterClass}
+                    strArray={'About me'.split('')}
+                    idx={12}
                     />
                 </h1>
                 <p>As a Software Engineer with a background in civil 

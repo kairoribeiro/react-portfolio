@@ -1,13 +1,23 @@
-import { useState, useRef } from 'react';
+import { useState, useEffect, useRef } from 'react';
 import Loader from 'react-loaders';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import './Contact.scss';
 import emailjs from '@emailjs/browser';
 
-const Contact = (props) => {
-    
+const Contact = () => {
 
-    const [strArray, setStrArray] = useState(['C', 'o', 'n', 't', 'a', 'c', 't', ' ', 'm', 'e'])
+    const [letterClass, setLetterClass] = useState('text-animate')
+
+  useEffect(() => {
+    const timer = setTimeout(() => {
+        setLetterClass('text-animate-hover')
+    }, 3000);
+
+    return() => {
+      clearTimeout(timer);
+    }
+});
+    
 
     const form = useRef();
 
@@ -31,8 +41,8 @@ const Contact = (props) => {
                 <div className='text-zone'>
                     <h1>
                         <AnimatedLetters
-                            letterClass={props.letterClass}
-                            strArray={strArray}
+                            letterClass={letterClass}
+                            strArray={'Contact me'.split('')}
                             idx={10}
                         />
                     </h1>
