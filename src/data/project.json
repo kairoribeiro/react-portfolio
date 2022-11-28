@@ -7,6 +7,15 @@
             "github": "https://github.com/kairoribeiro/post-social-media.git",
             "image": "/data/talk.png"
         },
+
+        {
+            "title": "React Movies",
+            "description": "React",
+            "deployment": "https://kairo-react-movies.netlify.app/",
+            "github": "https://github.com/kairoribeiro/react-movies",
+            "image": "/data/react-movies.png"
+        },
+
         {
             "title": "TIC TAC TOE",
             "description": "JavaScript",
