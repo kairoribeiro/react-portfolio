@@ -33,7 +33,6 @@ function App() {
       <Route path='/skills' element={<Skills letterClass={letterClass}/> }/>
       <Route path='/work' element={<Work letterClass={letterClass}/>}/>
       <Route path='/contact' element={<Contact letterClass={letterClass}/>}/>
-      <Route path='.resume' />
       </Route>
     </Routes>
     </>

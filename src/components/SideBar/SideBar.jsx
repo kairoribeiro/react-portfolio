@@ -68,15 +68,7 @@ const SideBar = () => {
                 >
                     <FontAwesomeIcon icon={faEnvelope} color='#fff' />
                 </NavLink>
-                <NavLink 
-                    onClick={() => setShowNav(false)}
-                    exact='true' 
-                    activeclassname='active' 
-                    className='resume-link' 
-                    to='/resume'
-                >
-                    <FontAwesomeIcon icon={faFile} color='#fff' />
-                </NavLink>
+                
                 <FontAwesomeIcon
                     onClick={() => setShowNav(false)}
                     icon={faClose}
@@ -86,6 +78,15 @@ const SideBar = () => {
                 />
             </nav>
             <ul className='sideUl'>
+            <li>
+                    <a 
+                        target='blank'
+                        rel='noreferrer'
+                        href="data/resume.pdf"
+                    >
+                        <FontAwesomeIcon icon={faFile} color='#fff' />
+                    </a>
+                </li>
                 <li>
                     <a 
                         target='blank'
