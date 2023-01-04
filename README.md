@@ -10,7 +10,7 @@
 <h1>Technologies Used </h1>
 <ol>
   <li>HTML</li>
-  <li>CSS</li>
+  <li>SCSS</li>
   <li>JavaScript</li>
   <li>React</li>
   <li>EmailJS</li>
