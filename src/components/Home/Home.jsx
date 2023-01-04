@@ -40,7 +40,7 @@ const Home = () => {
             <br />
             <AnimatedLetters 
                 letterClass={letterClass}
-                strArray={'Software Engineer'.split('')}
+                strArray={'Software Developer'.split('')}
                 idx={15}
             />
             </h1>
