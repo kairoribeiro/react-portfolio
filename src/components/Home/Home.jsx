@@ -4,6 +4,7 @@ import './Home.scss'
 import { useState, useEffect} from 'react';
 import AnimatedLetters from '../AnimatedLetters/AnimatedLetters';
 import Loader from 'react-loaders';
+import Img from '../Img/Img';
 
 
 const Home = () => {
@@ -46,6 +47,7 @@ const Home = () => {
             <h2>Full Stack Developer</h2>
             <Link to='/contact' className='flat-button'> CONTACT ME</Link>
         </div>
+        <Img />
     </div>
     <Loader type='ball-pulse' />
     </>
