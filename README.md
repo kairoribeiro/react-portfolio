@@ -4,7 +4,7 @@
 
 *[Deployed link](https://kairo-portfolio.vercel.app/)* <br>
 
-![WebPage!](/data/main-view.png "Main View")
+![WebPage!](/public/data/main-view.png 'Main View')
 
 
 <h1>Technologies Used </h1>
