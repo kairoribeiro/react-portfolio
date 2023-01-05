@@ -19,7 +19,7 @@ import { useState } from 'react';
 
 const SideBar = () => {
 
-    const [showNav, setShowNav] = useState(false)
+    const [showNav, setShowNav] = useState(false);
 
     return (
         <div className='nav-bar'>
@@ -27,7 +27,7 @@ const SideBar = () => {
                 <NavLink 
                     onClick={() => setShowNav(false)}
                     exact='true' 
-                    activeclassname='active' 
+                    activeclassname='active'
                     to='/'
                 >
                     <FontAwesomeIcon icon={faHome} color='#fff' />
@@ -68,14 +68,13 @@ const SideBar = () => {
                 >
                     <FontAwesomeIcon icon={faEnvelope} color='#fff' />
                 </NavLink>
-                <NavLink onClick={() => setShowNav(false)} >
                 <FontAwesomeIcon
+                    onClick={() => setShowNav(false)} 
                     icon={faClose}
                     color='#ffd700'
-                    size='1x'
+                    size='3x'
                     className='close-icon'
                 />
-                </NavLink>
             </nav>
             <ul className='sideUl'>
             <li>
@@ -114,7 +113,6 @@ const SideBar = () => {
                 size='3x'
                 className='hamburger-icon'
             />
-        
         </div>
     );
 }

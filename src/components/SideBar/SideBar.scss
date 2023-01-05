@@ -10,7 +10,6 @@
     min-height: 500px;
 }
 
-
 nav {
     display: block;
     text-align: center;
@@ -96,6 +95,7 @@ nav {
             color: #ffd700;
         }
     }
+    
 }
 
 .sideUl {
@@ -126,7 +126,6 @@ nav {
 }
 
 
-
 .hamburger-icon,
 .close-icon {
     display: none;
@@ -153,6 +152,10 @@ nav {
             z-index: 2;
             margin: 0;
 
+            &.mobile-show {
+                display: block;
+            }
+
             a {
                 display: flex;
                 justify-content: center;
@@ -170,9 +173,6 @@ nav {
                 opacity: 1 !important;
             }
 
-            &.mobile-show {
-                display: block;
-            }
         }   
         
         .hamburger-icon,
@@ -181,6 +181,7 @@ nav {
             // position: absolute;
             top: 15px;
             right: 15px;
+            margin: 15px auto;
         }
     }
 }
