@@ -3,7 +3,7 @@
         {
             "title": "Talk - Post Social Media",
             "description": "MEN Stack App",
-            "deployment": "https://post-social-media.herokuapp.com/",
+            "deployment": "https://post-social-media.fly.dev/",
             "github": "https://github.com/kairoribeiro/post-social-media.git",
             "image": "/data/talk.png"
         },
@@ -23,13 +23,7 @@
             "github": "https://github.com/kairoribeiro/Kairo-s-Portfolio.git",
             "image": "/data/tic-tac-toe.png"
         },
-        {
-            "title": "Beanie Babies Collector",
-            "description": "React",
-            "deployment": "https://beanie-babies-collector.herokuapp.com/",
-            "github": "https://github.com/kairoribeiro/beanie-babies-collector",
-            "image": "/data/beaniebabies.png"
-        },
+    
         {
             "title": "Drum Kit",
             "description": "JavaScript",
